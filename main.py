@@ -34,7 +34,6 @@ def search():
 
 
 def get_weather(city):
-    api_key = "" # If you want to run the code, please contact me to ask for the API Key. Email: profissional.drey@gmail.com or andrey.estevamseabra@richmond.edu
     url = base_url + "q=" + city + "&APPID=" + api_key
     response = requests.get(url).json()
     
@@ -65,10 +64,10 @@ def get_weather(city):
 
 
 if __name__ == '__main__':
+    api_key = input("Please, enter your Open Weather Map API key here: ")# If you want to run the code, please contact me to ask for the API Key. Email: profissional.drey@gmail.com or andrey.estevamseabra@richmond.edu
     root = ttkbootstrap.Window(themename="morph")
     root.title("Weather App")
     root.geometry("400x400")
-
     #City name
     city_entry = ttkbootstrap.Entry(root, font="Helvetica, 18")
     city_entry.pack(pady=10)
